@@ -1,0 +1,142 @@
+#!/usr/bin/R
+#Author: Sarah P. Flanagan
+#Date: 20 Aug 2014
+#Purpose of script: run onemap program on denovo map
+###!!!!BE SURE TO RUN THIS IN THE R ENVIRONMENT!!!!###
+#that way you can customize it to your specific needs and no. LGs
+
+rm(list = ls())
+library(onemap)
+gen<-read.outcross("/home/joneslab/Documents/Sarahs/LinkageMap/denovo", "batch_1.genotypes_50onemap.tsv")
+
+twopts<-rf.2pts(gen)
+mark.all<-make.seq(twopts, "all")
+LGs<-group(mark.all, LOD=6)
+set.map.fun(type="kosambi")
+#linkage group 1
+LG1<-make.seq(LGs, 1)
+LG1.ord<-order.seq(LG1, n.init=6, touchdown=TRUE)
+(LG1.final<-make.seq(LG1.ord, "force"))
+ripple.seq(LG1.final)
+#linkage group 2
+LG2<-make.seq(LGs, 2)
+LG2.ord<-order.seq(LG2, n.init=6, touchdown=TRUE)
+(LG2.final<-make.seq(LG2.ord, "force"))
+ripple.seq(LG2.final)
+#linkage group 3
+LG3<-make.seq(LGs, 3)
+LG3.ord<-order.seq(LG3, n.init=6, touchdown=TRUE)
+(LG3.final<-make.seq(LG3.ord, "force"))
+ripple.seq(LG3.final)
+#linkage group 4
+LG4<-make.seq(LGs, 4)
+LG4.ord<-order.seq(LG4, n.init=6, touchdown=TRUE)
+(LG4.final<-make.seq(LG4.ord, "force"))
+ripple.seq(LG4.final)
+#linkage group 5
+LG5<-make.seq(LGs, 5)
+LG5.ord<-order.seq(LG5, n.init=6, touchdown=TRUE)
+(LG5.final<-make.seq(LG5.ord, "force"))
+ripple.seq(LG5.final)
+#linkage group 6
+LG6<-make.seq(LGs, 6)
+LG6.ord<-order.seq(LG6, n.init=6, touchdown=TRUE)
+(LG6.final<-make.seq(LG6.ord, "force"))
+ripple.seq(LG6.final)
+#linkage group 7
+LG7<-make.seq(LGs, 7)
+LG7.ord<-order.seq(LG7, n.init=6, touchdown=TRUE)
+(LG7.final<-make.seq(LG7.ord, "force"))
+ripple.seq(LG7.final)
+#linkage group 8
+LG8<-make.seq(LGs, 8)
+LG8.ord<-order.seq(LG8, n.init=6, touchdown=TRUE)
+(LG8.final<-make.seq(LG8.ord, "force"))
+ripple.seq(LG8.final)
+#linkage group 9
+LG9<-make.seq(LGs, 9)
+LG9.ord<-order.seq(LG9, n.init=6, touchdown=TRUE)
+(LG9.final<-make.seq(LG9.ord, "force"))
+ripple.seq(LG9.final)
+#linkage group 10
+LG10<-make.seq(LGs, 10)
+LG10.ord<-order.seq(LG10, n.init=6, touchdown=TRUE)
+(LG10.final<-make.seq(LG10.ord, "force"))
+ripple.seq(LG10.final)
+#linkage group 11
+LG11<-make.seq(LGs, 11)
+LG11.ord<-order.seq(LG11, n.init=6, touchdown=TRUE)
+(LG11.final<-make.seq(LG11.ord, "force"))
+ripple.seq(LG11.final)
+#linkage group 12
+LG12<-make.seq(LGs, 12)
+LG12.ord<-order.seq(LG12, n.init=6, touchdown=TRUE)
+(LG12.final<-make.seq(LG12.ord, "force"))
+ripple.seq(LG12.final)
+#linkage group 13
+LG13<-make.seq(LGs, 13)
+LG13.ord<-order.seq(LG13, n.init=6, touchdown=TRUE)
+(LG13.final<-make.seq(LG13.ord, "force"))
+ripple.seq(LG13.final)
+#linkage group 14
+LG14<-make.seq(LGs, 14)
+LG14.ord<-order.seq(LG14, n.init=6, touchdown=TRUE)
+(LG14.final<-make.seq(LG14.ord, "force"))
+ripple.seq(LG14.final)
+#linkage group 15
+LG15<-make.seq(LGs, 15)
+LG15.ord<-order.seq(LG15, n.init=6, touchdown=TRUE)
+(LG15.final<-make.seq(LG15.ord, "force"))
+compare(LG15.final)
+#linkage group 16
+LG16<-make.seq(LGs, 16)
+LG16.ord<-order.seq(LG16, n.init=6, touchdown=TRUE)
+(LG16.final<-make.seq(LG16.ord, "force"))
+ripple.seq(LG16.final)
+#linkage group 17
+LG17<-make.seq(LGs, 17)
+LG17.ord<-order.seq(LG17, n.init=6, touchdown=TRUE)
+(LG17.final<-make.seq(LG17.ord, "force"))
+ripple.seq(LG17.final)
+#linkage group 18
+LG18<-make.seq(LGs, 18)
+LG18.ord<-order.seq(LG18, n.init=6, touchdown=TRUE)
+(LG18.final<-make.seq(LG18.ord, "force"))
+ripple.seq(LG18.final)
+#linkage group 19
+LG19<-make.seq(LGs, 19)
+LG19.ord<-order.seq(LG19, n.init=6, touchdown=TRUE)
+(LG19.final<-make.seq(LG19.ord, "force"))
+ripple.seq(LG19.final)
+#linkage group 20
+LG20<-make.seq(LGs, 20)
+LG20.ord<-order.seq(LG20, n.init=6, touchdown=TRUE)
+(LG20.final<-make.seq(LG20.ord, "force"))
+compare(LG20.final)
+#linkage group 21
+LG21<-make.seq(LGs, 21)
+LG21.ord<-order.seq(LG21, n.init=6, touchdown=TRUE)
+(LG21.final<-make.seq(LG21.ord, "force"))
+compare(LG21.final)
+#linkage group 22
+LG22<-make.seq(LGs, 22)
+LG22.ord<-order.seq(LG22, n.init=3, touchdown=TRUE)
+(LG22.final<-make.seq(LG22.ord, "force"))
+compare(LG22.final)#too few markers to use ripple
+
+maps<-list(LG1.final, LG2.final, LG3.final,LG4.final,LG5.final,
+LG6.final,LG7.final,LG8.final,LG9.final,LG10.final,LG11.final,
+LG12.final,LG13.final,LG14.final,LG15.final,LG16.final,LG17.final,
+LG18.final,LG19.final,LG20.final,LG21.final,LG22.final)
+
+#print the linkage groups and markers to run through tags_order_contigs.cpp
+
+merged<-merge(cat, map.mark, by='marker')
+sort.merge<-merged[order(merged$LG, merged$dist),]
+contigs<-sort.merge$contig
+chroms<-cbind(as.numeric(sort.merge$LG), as.numeric(sort.merge$marker))
+colnames(chroms)<-c("LG","radtag")
+write.table(chroms, "/home/joneslab/Documents/Sarahs/LinkageMap/making_linkage_map/ordered_contigs50.txt", row.names=FALSE, col.names=TRUE, sep='\t')
+
+
+
